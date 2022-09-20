@@ -1,0 +1,7 @@
+install.packages("xlsx")
+library("xlsx")
+data_nyeto_xlsx=read.xlsx("C:/Users/62895/Documents/Prak statistika/daftar siswa prak statistika 30 orang.xlsx", 1)
+
+
+
+data_nyeto_csv=read.csv("C:/Users/62895/Documents/Prak statistika/daftar siswa prak statistika 30 orang.csv")
