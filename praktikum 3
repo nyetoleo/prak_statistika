@@ -1,0 +1,35 @@
+data_nyeto = read.delim("clipboard")
+View(data_nyeto)
+
+nyeto<- data_nyeto[4]
+View(data_nyeto)
+
+nyeto$tinggi.badan <- ifelse(nyeto$tinggi.badan > 160, c("tinggi"), c("pendek"))
+View(nyeto)
+
+nyeto$Jurusan <-c("infor21")
+View(nyeto)
+
+nyeto$Fakultas <-c("FTI")
+View(nyeto)
+
+nyeto$Fakultas<-NULL
+View(nyeto)
+
+data_nyeto.kolom1dan2 <- data_nyeto[,1:2]
+View(data_nyeto.kolom1dan2)
+
+data_nyeto.kolom3dan4 <- data_nyeto[,3:4]
+View(data_nyeto.kolom3dan4)
+
+data_nyeto.kolom1sd4<-cbind(data_nyeto.kolom1dan2, data_nyeto.kolom3dan4)
+View(data_nyeto.kolom1sd4)
+
+data_nyeto.baris1sd5 <- data_nyeto[1:5,]
+data_nyeto.baris25sd30 <- data_nyeto[25:30,]
+data_nyeto1sd30 <-rbind(data_nyeto.baris1sd5, data_nyeto.baris25sd30)
+View(data_nyeto1sd30)
+
+data_nyeto.sort<-data_nyeto[order(data_nyeto$waktu.perjalanan),]
+View(data_nyeto.sort)
+
